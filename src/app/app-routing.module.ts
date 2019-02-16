@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DataService } from './services/data.service';
+
 
 const routes: Routes = [
   {
@@ -19,6 +21,12 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+
+  providers:[
+    DataService
+  ]
+
+  
 })
 export class AppRoutingModule {}
